@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenVilla | City Edge Flat</title>
+  <link rel="shortcut icon" href="favicon/real_estate.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <style>
+     *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #f5f6fa;
+      color: #102a55;
+    }
+
+    header {
+      background-color: #102a55;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .property-banner {
+      width: 100%;
+      height: 400px;
+      background-image: url('https://images.unsplash.com/photo-1527030280862-64139fba04ca');
+      background-size: cover;
+      background-position: center;
+      border-bottom: 5px solid #102a55;
+    }
+
+    .property-info {
+      max-width: 1100px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .property-info h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #102a55;
+    }
+
+    .property-info p {
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .details-grid div {
+      background-color: #f2f5ff;
+      padding: 10px 15px;
+      border-radius: 8px;
+    }
+
+    .features {
+      margin-top: 25px;
+    }
+
+    .features ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .features li {
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .features li::before {
+      content: "✔";
+      color: #102a55;
+      position: absolute;
+      left: 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #102a55;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 6px;
+      margin-top: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0a1c3a;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #102a55;
+      color: white;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .details-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ZenVilla Real Estate</h1>
+  </header>
+
+  <div class="property-banner"></div>
+
+  <section class="property-info">
+    <h2>City Edge Flat</h2>
+    <p>
+      A stylish and modern 2-bedroom flat offering city views and excellent connectivity. 
+      With an open kitchen design, private balcony, and elegant interior finishes, 
+      this flat provides the perfect blend of comfort and convenience.
+    </p>
+
+    <div class="details-grid">
+      <div><strong>🏷 Price:</strong> $220,000</div>
+      <div><strong>📍 Location:</strong> Downtown Islamabad, Pakistan</div>
+      <div><strong>🛏 Bedrooms:</strong> 2</div>
+      <div><strong>🛁 Bathrooms:</strong> 2</div>
+      <div><strong>📐 Area:</strong> 1200 sq.ft</div>
+      <div><strong>🏢 Type:</strong> Apartment / Flat</div>
+    </div>
+
+    <div class="features">
+      <h3>Features & Facilities</h3>
+      <ul>
+        <li>Spacious open kitchen with modern fittings</li>
+        <li>Private balcony with skyline view</li>
+        <li>Bright living and dining space</li>
+        <li>Secure entrance with 24/7 CCTV monitoring</li>
+        <li>High-speed elevators and standby power</li>
+        <li>Designated parking area</li>
+        <li>Nearby metro access and shopping centers</li>
+      </ul>
+    </div>
+
+    <a href="contact.html" class="btn">Book a Visit</a>
+    <a href="index.html" class="btn" style="background:#ccc; color:#102a55; margin-left:10px;">← Back to Home</a>
+  </section>
+
+  <footer>
+    <p>© 2025 ZenVilla Real Estate | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
