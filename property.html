@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Villas - ZenVilla Real Estate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="favicon/real_estate.png" type="image/x-icon" />
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #001f3f;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+    nav .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: #faf3e0;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    nav ul li {
+      margin-left: 30px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #faf3e0;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav .logo {
+  margin-left: 40px;
+}
+
+nav ul {
+  margin-right: 40px;
+}
+    nav ul li a:hover {
+      border: 2px solid #faf3e0;
+      border-radius: 5px;
+      padding: 5px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #001f3f;
+      min-width: 160px;
+      border-radius: 5px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    }
+    .dropdown-content a {
+      color: #faf3e0;
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+    }
+    .dropdown-content a:hover {
+      background-color: #004080;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .menu {
+      display: none;
+      cursor: pointer;
+    }
+    .menu div {
+      width: 25px;
+      height: 3px;
+      background-color: #faf3e0;
+      margin: 5px;
+      transition: 0.3s;
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #001f3f;
+        flex-direction: column;
+        display: none;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      nav ul li {
+        margin: 0;
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+      }
+      .menu { display: block; }
+    }
+
+    /* Featured or properties */
+    .featured {
+      padding: 100px 0 60px;
+      background-color: #001f3f;
+      color: white;
+      text-align: center;
+    }
+    .featured h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+      color: #f8f9fa;
+    }
+
+    .properties {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 0 40px;
+    }
+    .property-card {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      color: #001f3f;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      transition: 0.3s;
+      border: 2px solid #004080;
+      text-align: left; 
+    }
+    .property-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.25);
+    }
+    .property-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .property-card .content {
+      padding: 20px;
+    }
+    .property-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .property-card .price {
+      font-size: 18px;
+      color: #004080;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .property-card p {
+      font-size: 15px;
+      color: #333;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+    .btn {
+      text-decoration: none;
+      color: #001f3f;
+      font-weight: 500;
+      border: 2px solid #004080;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: 0.3s;
+      display: inline-block;
+    }
+    .btn:hover {
+      background-color: #004080;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+   <nav>
+      <div class="container">
+        <div class="logo">ZenVilla</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Properties ▾</a>
+            <div class="dropdown-content">
+              <a href="property.html">House</a>
+              <a href="flat.html">Flats</a>
+              <a href="villas.html">Villa</a>
+              <a href="pentpage.html">Penthouse</a>
+            </div>
+          </li>          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="menu" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </nav>
+
+  <section class="featured">
+    <h2>Exclusive Luxury Villas</h2>
+    <div class="properties">
+
+      <div class="property-card">
+        <img
+              src="https://images.unsplash.com/photo-1598635031829-4bfae29d33eb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8VmlsbGElMjBQYWxtJTIwRXN0YXRlfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500"
+              alt="Modern Apartment"
+            />
+            <div class="content">
+              <h3>Modern House in City Center</h3>
+              <div class="price">$250,000</div>
+              <p>Stylish modern house located in the heart of the city for convenient urban living.</p>
+              <a href="house1.html" class="btn">View Details</a>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <img
+              src="https://images.unsplash.com/photo-1634344656611-0773d8dbbe2c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500"
+              alt="Cozy House"
+            />
+            <div class="content">
+              <h3>Cozy House in Suburb</h3>
+              <div class="price">$350,000</div>
+              <p>Comfortable suburban home perfect for peaceful family living.</p>
+              <a href="house2.html" class="btn">View Details</a>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <img
+              src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500"
+              alt="Luxury Villa"
+            />
+            <div class="content">
+              <h3>Luxury House with Pool</h3>
+              <div class="price">$500,000</div>
+              <p>Elegant luxury home featuring a private pool and modern amenities.</p>
+              <a href="house3.html" class="btn">View Details</a>
+        </div>
+      </div>
+
+      <div class="property-card">
+<img
+              src="https://plus.unsplash.com/premium_photo-1661963952186-753746b27dbd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE2fHx8ZW58MHx8fHx8&auto=format&fit=crop&q=60&w=500"
+              alt="Studio Apartment"
+            />
+            <div class="content">
+              <h3>House Apartment Downtown</h3>
+              <div class="price">$180,000</div>
+              <p>Modern apartment in the heart of downtown with city conveniences.</p>
+              <a href="house4.html" class="btn">View Details</a>
+        </div>
+      </div>
+
+      <div class="property-card">
+       <img
+              src="https://plus.unsplash.com/premium_photo-1661876380847-be2a1fae414e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=869"
+              alt="Family Home"
+            />
+            <div class="content">
+              <h3>Spacious Family Home</h3>
+              <div class="price">$420,000</div>
+              <p>Large and comfortable family home designed for everyday living.</p>
+              <a href="house5.html" class="btn">View Details</a>
+        </div>
+      </div>
+<div class="property-card">
+                  <img
+              src="https://images.unsplash.com/photo-1741682739917-dae3dd66364f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHx8&auto=format&fit=crop&q=60&w=500"
+              alt="Penthouse"
+            />
+            <div class="content">
+              <h3>House with City Views</h3>
+              <div class="price">$600,000</div>
+              <p>Beautiful home offering stunning panoramic city views.</p>
+              <a href="house6.html" class="btn">View Details</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector("nav ul").classList.toggle("active");
+    }
+  </script>
+</body>
+</html>

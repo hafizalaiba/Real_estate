@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenVilla | Villa Serenity Heights</title>
+    <link rel="shortcut icon" href="favicon/real_estate.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f6fa;
+      color: #102a55;
+    }
+
+    header {
+      background-color: #102a55;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .property-banner {
+      width: 100%;
+      height: 400px;
+      background-image: url('https://plus.unsplash.com/premium_photo-1748428981016-5f34c4e76b6d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8VmlsbGElMjBTZXJlbml0eSUyMEhlaWdodHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=1200" alt="Villa Serenity Heights">');
+      background-size: cover;
+      background-position: center;
+      border-bottom: 5px solid #102a55;
+    }
+
+    .property-info {
+      max-width: 1100px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .property-info h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #102a55;
+    }
+
+    .property-info p {
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .details-grid div {
+      background-color: #f2f5ff;
+      padding: 10px 15px;
+      border-radius: 8px;
+    }
+
+    .features {
+      margin-top: 25px;
+    }
+
+    .features ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .features li {
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .features li::before {
+      content: "✔";
+      color: #102a55;
+      position: absolute;
+      left: 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #102a55;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 6px;
+      margin-top: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0a1c3a;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #102a55;
+      color: white;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .details-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ZenVilla Real Estate</h1>
+  </header>
+
+  <div class="property-banner"></div>
+
+  <section class="property-info">
+    <h2>Villa Serenity Heights</h2>
+    <p>
+      Discover peaceful hillside living in this luxurious villa featuring an infinity pool, private home theater, 
+      and stunning valley views. Perfect for privacy, relaxation, and modern comfort.
+    </p>
+
+    <div class="details-grid">
+      <div><strong>🏷 Price:</strong> $980,000</div>
+      <div><strong>📍 Location:</strong> Serenity Hills, Islamabad</div>
+      <div><strong>🛏 Bedrooms:</strong> 4</div>
+      <div><strong>🛁 Bathrooms:</strong> 3</div>
+      <div><strong>📐 Area:</strong> 3600 sq.ft</div>
+      <div><strong>🏢 Type:</strong> Hillside Villa</div>
+    </div>
+
+    <div class="features">
+      <h3>Features & Facilities</h3>
+      <ul>
+        <li>Infinity pool overlooking the valley</li>
+        <li>Private home theater for entertainment</li>
+        <li>Spacious modern interiors</li>
+        <li>Secluded and private location</li>
+        <li>24/7 security and maintenance</li>
+        <li>Dedicated underground parking</li>
+        <li>Terrace and outdoor lounge area</li>
+      </ul>
+    </div>
+
+    <a href="contact.html" class="btn">Book a Visit</a>
+    <a href="index.html" class="btn" style="background:#ccc; color:#102a55; margin-left:10px;">← Back to Home</a>
+  </section>
+
+  <footer>
+    <p>© 2025 ZenVilla Real Estate | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
